@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2868
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 toolName: view_files\
+            \
+status: success\
+          \
+            \
+filePath: /Users/mohammedthahers/Desktop/Projects/smart_counter/test.py\
+          \
+\
+        \
+            \
+toolName: manage_core_memory\
+            \
+status: success\
+          \
+          \
+**Detailed Project Note: Smart Counter**<mccoremem id="01KR0SAN069XDXFEQ3RBCB9RYC" />\
+\
+**Overview**\
+Smart Counter is a high-performance computer vision application designed to automate object detection and counting tasks. By utilizing the state-of-the-art **YOLOv8** (You Only Look Once) architecture, the project provides real-time insights into visual data, whether from static uploads or live video streams.\
+\
+**Core Features**\
+- **Dual Operating Modes**:\
+  - **Web Dashboard**: An interactive Gradio interface for processing uploaded images.\
+  - **Live Stream**: A local OpenCV-based script for real-time counting via webcam.\
+- **Multi-Class Detection**: Automatically identifies and counts multiple object categories simultaneously (e.g., people, cars, chairs, etc.).\
+- **Visual Feedback**: Provides annotated visual outputs with bounding boxes and dynamic labels.\
+- **Instant Summaries**: Generates a clean text breakdown of all detected objects and their respective counts.\
+\
+**Technical Stack**\
+- **Model**: [yolov8n.pt](file:///Users/mohammedthahers/Desktop/Projects/smart_counter/yolov8n.pt) (Nano version) \'97 optimized for high speed and low latency.\
+- **Frameworks**:\
+  - **Ultralytics**: Simplifies the implementation of the YOLOv8 model.\
+  - **Gradio**: Handles the UI/UX for the web application.\
+  - **OpenCV**: Manages hardware integration (webcam) and image manipulation.\
+- **Language**: Python 3.x.\
+\
+**Component Breakdown**\
+- [app.py](file:///Users/mohammedthahers/Desktop/Projects/smart_counter/app.py): Implements the `count_objects` logic and launches the Gradio server. It converts PIL images to NumPy arrays for processing and back to PIL for display.\
+- [counter.py](file:///Users/mohammedthahers/Desktop/Projects/smart_counter/counter.py): A standalone script for low-latency live detection. It uses a `while` loop to capture frames and `cv2.putText` to overlay real-time stats.\
+- [test.py](file:///Users/mohammedthahers/Desktop/Projects/smart_counter/test.py): A utility script used to verify model loading and basic detection functionality.\
+\
+**Setup and Execution**\
+1. **Install Dependencies**:\
+   ```bash\
+   pip install -r requirements.txt\
+   ```\
+2. **Launch Web App**:\
+   ```bash\
+   python app.py\
+   ```\
+3. **Run Real-time Counter**:\
+   ```bash\
+   python counter.py\
+   ```\
+\
+**Use Cases**\
+- **Retail**: Monitoring customer footfall or shelf inventory.\
+- **Traffic Management**: Counting vehicles in intersections.\
+- **Industrial**: Quality control and part counting on assembly lines.\
+- **Accessibility**: Assisting visually impaired users by identifying surrounding objects.\
+}
